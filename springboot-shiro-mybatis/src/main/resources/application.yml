@@ -1,0 +1,28 @@
+#默认使用配置
+spring:
+  profiles:
+      active: dev
+  jpa:
+   database: MYSQL
+#   show-sql: true
+#   hibernate:
+#       ddl-auto: update
+#       naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+#   properties:
+#       hibernate.dialect : org.hibernate.dialect.MySQL5Dialect
+  datasource:
+       url: jdbc:mysql://localhost:3308/springboot_shiro?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+       username: root
+       password: 123456
+       driver-class-name: com.mysql.jdbc.Driver
+#       removeAbandoned: true
+#       filters: stat
+#       cachePrepStmts: true
+
+mybatis:
+  typeAliasesPackage: com.example.shiro.dao.entity
+  mapperLocations: classpath:mapper/*.xml
+
+server:
+  port: 8060
+
